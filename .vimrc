@@ -42,8 +42,12 @@ set ignorecase            " Ignore case when searching
 set smartcase             " Enable case-sensitive searching when uppercase letters are used
 set incsearch             " Show search matches as you type
 set wrapscan              " Search wraps around the end of the file
+set clipboard=unnamed,autoselect " copy yanked data to clip board and selected data
 set syntax=enable         " Enable syntax highlighting
 colorscheme monokai       " Set color scheme to Monokai
+inoremap <silent> jj <ESC> " escape from insert mode with jj
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=#666666
+au BufNewFile,BufRead * match ZenkakuSpace /　/
 
 " Tab settings
 set expandtab             " Convert tabs to spaces
