@@ -20,51 +20,12 @@ call plug#begin()
   Plug 'github/copilot.vim'                " GitHub Copilot
 call plug#end()
 
-" General settings
-set encoding=UTF-8        " Set file encoding to UTF-8
-set fenc=utf-8            " Set the file encoding to UTF-8
-set nobackup              " Disable creation of backup files
-set noswapfile            " Disable creation of swap files
-set autoread              " Automatically reload files if changed externally
-set hidden                " Allow switching buffers without saving
-set showcmd               " Show incomplete commands
-set list listchars=tab:\▸\-  " Display tabs and trailing spaces with special characters
-set title                 " Set the terminal title
-set laststatus=2          " Always show the status line
-set clipboard+=unnamed    " Use the system clipboard
-set nocompatible          " Disable compatibility with vi
-set number                " Display line numbers
-set cursorline            " Highlight the current line
-set cursorcolumn          " Highlight the current column
-set virtualedit=onemore   " Allow cursor to move past the end of line
-set smartindent           " Enable smart indentation
-set autoindent            " Enable auto indentation
-set visualbell            " Use visual bell instead of beeping
-set showmatch             " Highlight matching brackets
-set wildmode=list:longest " Use longest partial completion
-set hlsearch              " Highlight search results
-set ignorecase            " Ignore case when searching
-set smartcase             " Enable case-sensitive searching when uppercase letters are used
-set incsearch             " Show search matches as you type
-set wrapscan              " Search wraps around the end of the file
-set clipboard=unnamed,autoselect " copy yanked data to clip board and selected data
-set syntax=enable         " Enable syntax highlighting
+source ./basic.vim
+
 colorscheme molokai       " Set color scheme to molokai
 let g:molokai_original = 1
 
-inoremap <silent> jj <ESC> " escape from insert mode with jj
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=#666666
-au BufNewFile,BufRead * match ZenkakuSpace /　/
-
-" Tab settings
-set expandtab             " Convert tabs to spaces
-set tabstop=2             " Set the width of a tab to 2 spaces
-set shiftwidth=2          " Set the width of an indentation level to 2 spaces
-retab                     " Convert all tabs to spaces
-
 " NERDTree settings
-nnoremap j gj                 " Map j to move down displayed lines
-nnoremap k gk                 " Map k to move up displayed lines
 map <C-n> :NERDTreeToggle<CR> " This maps the shortcut key combination Ctrl + n to toggle the NERDTree plugin on and off.
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 24 " This sets the font used in the Vim GUI to 'Droid Sans Mono for Powerline Nerd Font Complete' with a font size of 16.
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = "" " This sets the padding between the file/folder icon and the file/folder name to an empty string.
@@ -106,10 +67,6 @@ map <C-l> :LspDocumentDiagnostics<CR>   " Run lint with Ctrl + l
 map <C-f> :LspDocumentFormat<CR>        " Format document with Ctrl + f
 let g:lsp_diagnostics_echo_cursor = 1   " Warn with cursor when missing some syntax
 autocmd BufWritePre <buffer> LspDocumentFormatSync " LSP will run when saving
-
-" Disable search highlighting with ESC ESC
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
-
 
 " Setting for Python
 " you can use this by running `:set syntax=python`
