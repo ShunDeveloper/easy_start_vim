@@ -16,3 +16,6 @@ Mac OS(M1 Max)
 - Glyph
 - Airline
 - LSP Installer
+- GitHub Copilot
+
+## Product

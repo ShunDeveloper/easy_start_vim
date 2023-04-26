@@ -1,6 +1,7 @@
 " Setting for Python
 " Enable syntax highlighting for Python files
 autocmd FileType python syntax on
+let g:python_highlight_all = 1
 
 " for flake8 Python linter
 let g:python_host_prog = '/usr/bin/python3' " Set the path to the Python 3 interpreter
