@@ -16,3 +16,8 @@ let g:airline#extensions#tabline#show_tab_nr = 0 " do not show the tab number in
 let g:airline#extensions#tabline#show_tab_type = 0 " show the tab type in airline tabline
 let g:airline#extensions#tabline#show_close_button = 0 " do not show the close button in airline tabline
 let g:airline_theme = 'base16_monokai' " set the airline theme to base16_monokai
+" Disable underline in Airline tabline
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''

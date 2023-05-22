@@ -5,8 +5,7 @@ call plug#begin()
   Plug 'ryanoasis/nerd-fonts'              " Nerd Fonts
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'            " Adds file type icons to Vim plugins
-  Plug 'vim-airline/vim-airline'           " Status bar
-  Plug 'vim-airline/vim-airline-themes'    " Themes for Airline
+  Plug 'itchyny/lightline.vim'             " Status bar
   Plug 'lambdalisue/glyph-palette.vim'     " Add glyphs for Nerd Fonts
   Plug 'tpope/vim-commentary'              " Comment out lines
   Plug 'prabirshrestha/vim-lsp'            " LSP client for Vim
@@ -18,4 +17,7 @@ call plug#begin()
   Plug 'tomasr/molokai'                    " colorscheme
   Plug 'airblade/vim-gitgutter'
   Plug 'github/copilot.vim'                " GitHub Copilot
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go support
+  Plug 'pangloss/vim-javascript'
+  Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
 call plug#end()

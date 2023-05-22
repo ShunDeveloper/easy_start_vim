@@ -28,6 +28,8 @@ set title                     " Set the terminal title
 set virtualedit=onemore       " Allow cursor to move past the end of line
 set visualbell                " Use visual bell instead of beeping
 set wildmode=list:longest     " Use longest partial completion
+set wildmenu
+set wildmode=full
 set wrapscan                  " Search wraps around the end of the file
 
 " Highlight Zenkaku space character
@@ -36,4 +38,15 @@ au BufNewFile,BufRead * match ZenkakuSpace /　/
 
 " Key mappings
 inoremap <silent> jj <ESC>    " Escape from insert mode with jj
-nmap <Esc><Esc> :nohlsearch<CR><Esc>    " Disable search highlighting with ESC ESC
+nmap <Esc><Esc> :nohlsearch<CR><Esc> " Disable search highlighting with ESC ESC
+vnoremap <silent> <S-K> y<Esc>P
+
+" Transparent background
+augroup TransparentBG
+  	autocmd!
+	autocmd Colorscheme * highlight Normal ctermbg=none
+	autocmd Colorscheme * highlight NonText ctermbg=none
+	autocmd Colorscheme * highlight LineNr ctermbg=none
+	autocmd Colorscheme * highlight Folded ctermbg=none
+	autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
+augroup END
