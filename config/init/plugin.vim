@@ -20,4 +20,5 @@ call plug#begin()
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go support
   Plug 'pangloss/vim-javascript'
   Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
+  Plug 'vim-python/python-syntax'
 call plug#end()

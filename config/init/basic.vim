@@ -43,7 +43,7 @@ vnoremap <silent> <S-K> y<Esc>P
 
 " Transparent background
 augroup TransparentBG
-  	autocmd!
+  autocmd!
 	autocmd Colorscheme * highlight Normal ctermbg=none
 	autocmd Colorscheme * highlight NonText ctermbg=none
 	autocmd Colorscheme * highlight LineNr ctermbg=none
