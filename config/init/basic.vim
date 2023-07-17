@@ -1,4 +1,3 @@
-" General settings
 set autoindent                " Enable auto indentation
 set autoread                  " Automatically reload files if changed externally
 set clipboard+=unnamed        " Use the system clipboard
@@ -50,3 +49,8 @@ augroup TransparentBG
 	autocmd Colorscheme * highlight Folded ctermbg=none
 	autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
 augroup END
+
+set laststatus=2
+if !has('gui_running')
+  set t_Co=256
+endif

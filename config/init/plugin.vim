@@ -14,7 +14,8 @@ call plug#begin()
   Plug 'prabirshrestha/asyncomplete-lsp.vim'  " LSP completion source for Asyncomplete
   Plug 'mattn/vim-sonictemplate'           " Template engine for Vim
   Plug 'dense-analysis/ale'                " Linter
-  Plug 'tomasr/molokai'                    " colorscheme
+  Plug 'sheerun/vim-polyglot'
+  Plug 'drewtempelmeyer/palenight.vim'
   Plug 'airblade/vim-gitgutter'
   Plug 'github/copilot.vim'                " GitHub Copilot
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go support
