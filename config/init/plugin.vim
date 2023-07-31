@@ -22,4 +22,5 @@ call plug#begin()
   Plug 'pangloss/vim-javascript'
   Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
   Plug 'vim-python/python-syntax'
+  Plug 'mileszs/ack.vim'
 call plug#end()
