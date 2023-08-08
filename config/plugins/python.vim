@@ -13,7 +13,8 @@ let g:ale_fixers = {
     \ 'python': ['autopep8', 'black', 'isort'],
     \ }
 let g:flake8_ignore = 'E501'
-let g:ale_python_flake8_options = ['--ignore=E501']  
+let g:ale_python_flake8_options = '--max-line-length=120 --ignore=E265,E266,501'
+
 
 " 各ツールの実行オプションを変更してPythonパスを固定
 let g:ale_python_flake8_executable = g:python3_host_prog
