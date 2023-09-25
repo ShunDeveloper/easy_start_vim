@@ -1,3 +1,7 @@
+" ---------------------------------------
+"  General settings
+" ---------------------------------------
+
 set autoindent                " Enable auto indentation
 set autoread                  " Automatically reload files if changed externally
 set clipboard+=unnamed        " Use the system clipboard
@@ -31,16 +35,33 @@ set wildmenu
 set wildmode=full
 set wrapscan                  " Search wraps around the end of the file
 
+" ---------------------------------------
+" Set the leader key to comma
+" ---------------------------------------
+let mapleader=","
+
+
+" ---------------------------------------
 " Highlight Zenkaku space character
+" ---------------------------------------
+
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=#666666
 au BufNewFile,BufRead * match ZenkakuSpace /　/
 
+
+" ---------------------------------------
 " Key mappings
+" ---------------------------------------
+
 inoremap <silent> jj <ESC>    " Escape from insert mode with jj
 nmap <Esc><Esc> :nohlsearch<CR><Esc> " Disable search highlighting with ESC ESC
 vnoremap <silent> <S-K> y<Esc>P
 
+
+" ---------------------------------------
 " Transparent background
+" ---------------------------------------
+
 augroup TransparentBG
   autocmd!
 	autocmd Colorscheme * highlight Normal ctermbg=none

@@ -26,6 +26,7 @@ call plug#begin()
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
   " Language support
+  Plug 'rhysd/vim-clang-format', {'for': 'cpp'}
   Plug 'dense-analysis/ale'
   Plug 'sheerun/vim-polyglot'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
