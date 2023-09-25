@@ -8,6 +8,7 @@ let g:ale_linters = {
     \ 'python': ['flake8'],
     \ }
 
+
 " 各ツールをFixerとして登録
 let g:ale_fixers = {
     \ 'python': ['autopep8', 'black', 'isort'],
@@ -17,6 +18,7 @@ let g:ale_python_flake8_options = '--max-line-length=120 --ignore=E265,E266,501'
 
 
 " 各ツールの実行オプションを変更してPythonパスを固定
+let g:python3_host_prog = '~/.pyenv/shims/python3'
 let g:ale_python_flake8_executable = g:python3_host_prog
 let g:ale_python_flake8_options = '-m flake8'
 let g:ale_python_autopep8_executable = g:python3_host_prog
