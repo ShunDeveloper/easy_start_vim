@@ -2,6 +2,8 @@
 # Initial Setup for vim
 # -------------------------------------------------
 
+echo "Initial Setup for vim"
+
 # init vim config
 mkdir -p ~/.vim
 
@@ -20,7 +22,7 @@ read -p 'Do you install `plug.vim` ? [y/n]: ' answer
 # Convert the answer to lowercase
 answer=$(echo $answer | tr '[:upper:]' '[:lower:]')
 
-# Check the answer
+# Install vim-plug if the answer is yes
 if [ "$answer" == 'y' ] || [ "$answer" == 'yes' ]; then
    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
