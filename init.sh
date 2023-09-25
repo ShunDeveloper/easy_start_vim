@@ -7,7 +7,7 @@ mkdir -p ~/.vim
 
 # copy vimrc & config
 cp src/.vimrc ~/.vimrc
-cp -r config ~/.vim/config
+cp -r src/config ~/.vim/config
 
 
 # -------------------------------------------------
