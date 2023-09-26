@@ -34,11 +34,11 @@ set wildmode=list:longest     " Use longest partial completion
 set wildmenu
 set wildmode=full
 set wrapscan                  " Search wraps around the end of the file
-
+set packpath+=~/.vim/plugged
 " ---------------------------------------
-" Set the leader key to comma
+" Set the leader key to / (slash)
 " ---------------------------------------
-let mapleader=","
+let mapleader="0"
 
 
 " ---------------------------------------

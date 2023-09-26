@@ -27,6 +27,7 @@ call plug#begin()
 
   " Language support
   Plug 'rhysd/vim-clang-format', {'for': 'cpp'}
+  Plug 'deoplete-plugins/deoplete-clang'
   Plug 'dense-analysis/ale'
   Plug 'sheerun/vim-polyglot'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -37,4 +38,5 @@ call plug#begin()
   " Other utilities
   Plug 'github/copilot.vim'
   Plug 'mattn/vim-sonictemplate'
+  Plug 'kana/vim-operator-user'
 call plug#end()

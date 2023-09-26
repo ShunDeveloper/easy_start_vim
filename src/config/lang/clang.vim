@@ -1,9 +1,12 @@
 " -----------------------------
+"
 "  Clang-format
 " -----------------------------
 
+set formatprg=clang-format\ --style\ google
+
 " Set clang-format command path
-let g:clang_format#command = '/opt/homebrew/bin/clang-format'
+let g:clang_format#command = "/opt/homebrew/bin/clang-format"
 
 " Set code style to Google
 let g:clang_format#code_style = "google"
@@ -15,9 +18,6 @@ let g:clang_format#style_options = {
             \ "AlwaysBreakTemplateDeclarations" : "true",
             \ "Standard" : "C++20"}
 
-" Enable auto formatting on save
-let g:clang_format#auto_format = 1
-
 
 " -----------------------------
 "  Key mappings
@@ -27,6 +27,3 @@ let g:clang_format#auto_format = 1
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
-
-" Toggle auto formatting:
-nmap <Leader>C :ClangFormatAutoToggle<CR>
